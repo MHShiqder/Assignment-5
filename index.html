@@ -3,69 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisyUI link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind css link  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- tittle of the page  -->
     <title>Assignment-5</title>
+    <style>
+        .lexend-normal {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <!-- tailwind customization -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                btnPrimary: "#ABEF5F",
+                btnSecondary: "rgba(171, 239, 95, 0.5)",
+                btnTertiary: "rgba(171, 239, 95, 0.2)",
+  
+                textOne: "#212121",
+                textTwo: "#1C1C1C",
+                textThree: "#494949",
+                textFour: "#737373",
+                inputText: "#A0A0A0",
+                menuText: "#E9E9E9",
+  
+                backGround: "#f9f7f3",
+                bannerBg: "rgba(255, 255, 255, 0)",
+                aboutText: "rgba(0, 0, 0, 0.2)",
+  
+                cardOne: "#E7C1D3",
+                cardTwo: "#EFDA6E",
+                cardThree: "#A4DAC3",
+                cardFour: "#77AAEA",
+              },
+            },
+          },
+        };
+      </script>
 </head>
-<body>
-    <header>
+<body class="lexend-normal bg-backGround">
+    <header class="pb-8">
         <!-- navbar start  -->
-        <div class="navbar bg-base-100">
+        <div class="navbar py-6 w-11/12 mx-auto">
+            <!-- left button  -->
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <li><a>Item 1</a></li>
-                  <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-xl">daisyUI</a>
+              <a class="btn bg-btnPrimary hover:bg-btnSecondary text-xl px-8 py-3 h-auto">Blog</a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
-                  <details>
-                    <summary>Parent</summary>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </details>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
+            <!-- middle logo  -->
+            <div class="navbar-center  flex space-x-4">
+              <img src="assets/logo.png" alt="logo">
+              <h3 class="text-xl font-semibold hidden md:block">Donate Bangladesh</h3>
             </div>
-            <div class="navbar-end">
-              <a class="btn">Button</a>
-            </div>
+            <!-- balance part  -->
+            <div class="navbar-end flex space-x-1">
+              <img src="assets/coin.png" alt="coin">
+              <h4>5500</h4>
+              <h4>BDT</h4>
           </div>
          <!-- navbar end  -->
     </header>
     <main>
-
     </main>
     <footer>
 
