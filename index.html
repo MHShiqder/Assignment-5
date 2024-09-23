@@ -30,7 +30,9 @@
                 btnPrimary: "#ABEF5F",
                 btnSecondary: "rgba(171, 239, 95, 0.5)",
                 btnTertiary: "rgba(171, 239, 95, 0.2)",
-  
+                stickyNav: "rgba(234,182,118,0.3)",
+                stickyNav2: "rgba(255,255,255,0.3)",
+
                 textOne: "#212121",
                 textTwo: "#1C1C1C",
                 textThree: "#494949",
@@ -38,7 +40,7 @@
                 inputText: "#A0A0A0",
                 menuText: "#E9E9E9",
   
-                backGround: "#f9f7f3",
+                backGround: "rgba(249,247,243,1)",
                 bannerBg: "rgba(255, 255, 255, 0)",
                 aboutText: "rgba(0, 0, 0, 0.2)",
   
@@ -52,28 +54,115 @@
         };
       </script>
 </head>
-<body class="lexend-normal bg-backGround">
-    <header class="pb-8">
+
+<body class="lexend-normal bg-white">
+    <header class="sticky top-0 overflow-hidden bg-stickyNav2 backdrop-blur z-30 flex flex-col space-y-8">
         <!-- navbar start  -->
-        <div class="navbar py-6 w-11/12 mx-auto">
-            <!-- left button  -->
-            <div class="navbar-start">
-              <a href="./blog.html" class="btn bg-btnPrimary hover:bg-btnSecondary text-xl px-8 py-3 h-auto">Blog</a>
+        <div class="bg-stickyNav backdrop-blur-sm">
+            <div class="navbar py-2 w-11/12 mx-auto ">
+                <!-- left button  -->
+                <div class="navbar-start">
+                  <a href="./blog.html" class="btn bg-btnPrimary hover:bg-btnSecondary text-xl px-8 py-3 h-auto">Blog</a>
+                </div>
+                <!-- middle logo  -->
+                <div class="navbar-center  flex space-x-4">
+                  <img src="assets/logo.png" alt="logo">
+                  <h3 class="text-xl font-semibold hidden md:block">Donate Bangladesh</h3>
+                </div>
+                <!-- balance part  -->
+                <div class="navbar-end flex space-x-1">
+                  <img src="assets/coin.png" alt="coin">
+                  <h4>5500</h4>
+                  <h4>BDT</h4>
+                </div>
             </div>
-            <!-- middle logo  -->
-            <div class="navbar-center  flex space-x-4">
-              <img src="assets/logo.png" alt="logo">
-              <h3 class="text-xl font-semibold hidden md:block">Donate Bangladesh</h3>
-            </div>
-            <!-- balance part  -->
-            <div class="navbar-end flex space-x-1">
-              <img src="assets/coin.png" alt="coin">
-              <h4>5500</h4>
-              <h4>BDT</h4>
-          </div>
+        </div>
          <!-- navbar end  -->
+
+         <!-- navigate button section -->
+          <section class=" w-11/12 mx-auto text-center space-x-3 ">
+            <button class="btn bg-btnPrimary hover:bg-btnSecondary">Donation</button>
+            <button class="btn bg-btnTertiary hover:bg-btnSecondary border-2 border-gray-400">History</button>
+          </section>
     </header>
-    <main>
+
+    <main class="bg-white">
+        <!-- donation card section  -->
+        <section class="w-11/12 mx-auto">
+            <!-- card one  -->
+            <div class="hero  min-h-screen">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="text-center lg:text-left">
+                    <h1 class="text-5xl font-bold">Login now!</h1>
+                    <p class="py-6">
+                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                      quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                  </div>
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Email</span>
+                        </label>
+                        <input type="email" placeholder="email" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Password</span>
+                        </label>
+                        <input type="password" placeholder="password" class="input input-bordered" required />
+                        <label class="label">
+                          <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                        </label>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <main class="bg-white">
+        <!-- donation card section  -->
+        <section class="w-11/12 mx-auto">
+            <!-- card one  -->
+            <div class="hero  min-h-screen">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="text-center lg:text-left">
+                    <h1 class="text-5xl font-bold">Login now!</h1>
+                    <p class="py-6">
+                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                      quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                  </div>
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Email</span>
+                        </label>
+                        <input type="email" placeholder="email" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Password</span>
+                        </label>
+                        <input type="password" placeholder="password" class="input input-bordered" required />
+                        <label class="label">
+                          <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                        </label>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </section>
     </main>
     <footer>
 
