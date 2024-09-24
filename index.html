@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <!-- tittle of the page  -->
-    <title>Assignment-5</title>
+    <title>Home Page</title>
     <style>
         .lexend-normal {
             font-family: "Lexend", sans-serif;
@@ -69,10 +69,10 @@
                   <img src="assets/logo.png" alt="logo">
                   <h3 class="text-xl font-semibold hidden md:block">Donate Bangladesh</h3>
                 </div>
-                <!-- balance part  -->
+                <!--Current balance part  -->
                 <div class="navbar-end flex space-x-1">
                   <img src="assets/coin.png" alt="coin">
-                  <h4>5500</h4>
+                  <h4 id="current-value">5500</h4>
                   <h4>BDT</h4>
                 </div>
             </div>
@@ -80,92 +80,77 @@
          <!-- navbar end  -->
 
          <!-- navigate button section -->
-          <section class=" w-11/12 mx-auto text-center space-x-3 ">
+          <section class=" w-11/12 mx-auto text-center space-x-3 pb-3">
             <button class="btn bg-btnPrimary hover:bg-btnSecondary">Donation</button>
-            <button class="btn bg-btnTertiary hover:bg-btnSecondary border-2 border-gray-400">History</button>
+            <button class="btn bg-btnTertiary hover:bg-btnSecondary border-2 border-gray-200">History</button>
           </section>
     </header>
 
-    <main class="bg-white">
+    <main class="bg-white my-10">
         <!-- donation card section  -->
-        <section class="w-11/12 mx-auto">
+        <section id="donation-section" class="w-11/12 mx-auto space-y-10">
+
+           
+            <!-- modal section  -->
+             <section>
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box text-center space-y-4">
+                        <h3 class="text-4xl font-bold">Congrats</h3>
+                        <img class="mx-auto" src="assets/coin.png" alt="coin">
+                        <p class="">You have donated for humankind</p>
+                        <h4 class="text-lg font-bold">successfully</h4>
+                        <div class="modal-action">
+                        <form method="dialog" class="mx-auto">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn ">Close</button>
+                        </form>
+                        </div>
+                    </div>
+                    </dialog>
+             </section>
+
             <!-- card one  -->
-            <div class="hero  min-h-screen">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                  <div class="text-center lg:text-left">
-                    <h1 class="text-5xl font-bold">Login now!</h1>
-                    <p class="py-6">
-                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                      quasi. In deleniti eaque aut repudiandae et a id nisi.
-                    </p>
+            <div class="border-2 border-gray-300 rounded-xl   w-full">                
+                <div class="flex items-center px-8 py-8 flex-col-reverse lg:flex-row-reverse lg:justify-between gap-8 w-full">
+                    
+                    <!-- text part  -->
+                  <div class="space-y-3">
+                    <!-- total donate button -->
+                    <button class=" flex space-x-1 bg-slate-200 rounded-lg py-2 px-3 items-center">
+                        <img src="assets/coin.png" alt="coin">
+                        <h4>5500</h4>
+                        <h4>BDT</h4>
+                    </button>
+                    <!-- tittle & description -->
+                     <h4 class="font-bold text-lg text-textOne" >Donate for Flood at Noakhali, Bangladesh</h4>
+                     <p class="font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                     <!-- input box  -->
+                     <input id="donate-input-value" class="w-full border-2 border-gray-100 rounded-sm p-3" type="text" placeholder="Write Donation Amount" required>
+                     <!-- input button  -->
+                     <button id="donate-input-button" class="w-full btn bg-btnPrimary font-semibold text-lg">Donate Now</button>
                   </div>
-                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form class="card-body">
-                      <div class="form-control">
-                        <label class="label">
-                          <span class="label-text">Email</span>
-                        </label>
-                        <input type="email" placeholder="email" class="input input-bordered" required />
-                      </div>
-                      <div class="form-control">
-                        <label class="label">
-                          <span class="label-text">Password</span>
-                        </label>
-                        <input type="password" placeholder="password" class="input input-bordered" required />
-                        <label class="label">
-                          <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
-                      </div>
-                      <div class="form-control mt-6">
-                        <button class="btn btn-primary">Login</button>
-                      </div>
-                    </form>
+
+                  <!-- image part  -->
+                  <div class="card bg-base-100 lg:w-1/2 shrink-0 ">
+                    <img src="assets/noakhali.png" alt="">
                   </div>
                 </div>
               </div>
         </section>
+
+
+
+
+        <!-- history section  -->
+         <section id="history-section" class="space-y-5">
+
+         </section>
     </main>
-    <main class="bg-white">
-        <!-- donation card section  -->
-        <section class="w-11/12 mx-auto">
-            <!-- card one  -->
-            <div class="hero  min-h-screen">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                  <div class="text-center lg:text-left">
-                    <h1 class="text-5xl font-bold">Login now!</h1>
-                    <p class="py-6">
-                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                      quasi. In deleniti eaque aut repudiandae et a id nisi.
-                    </p>
-                  </div>
-                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form class="card-body">
-                      <div class="form-control">
-                        <label class="label">
-                          <span class="label-text">Email</span>
-                        </label>
-                        <input type="email" placeholder="email" class="input input-bordered" required />
-                      </div>
-                      <div class="form-control">
-                        <label class="label">
-                          <span class="label-text">Password</span>
-                        </label>
-                        <input type="password" placeholder="password" class="input input-bordered" required />
-                        <label class="label">
-                          <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
-                      </div>
-                      <div class="form-control mt-6">
-                        <button class="btn btn-primary">Login</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-        </section>
-    </main>
+    
     <footer>
 
     </footer>
+    <script src="home.js"></script>
+    <script src="utility.js"></script>
 </body>
 </html>

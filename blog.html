@@ -3,13 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog page</title>
+    <!-- daisyUI link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- tittle of the page  -->
+    <title>Blog Page</title>
+    <style>
+        .lexend-normal {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <!-- tailwind customization -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                btnPrimary: "#ABEF5F",
+                btnSecondary: "rgba(171, 239, 95, 0.5)",
+                btnTertiary: "rgba(171, 239, 95, 0.2)",
+                stickyNav: "rgba(234,182,118,0.3)",
+                stickyNav2: "rgba(255,255,255,0.3)",
+
+                textOne: "#212121",
+                textTwo: "#1C1C1C",
+                textThree: "#494949",
+                textFour: "#737373",
+                inputText: "#A0A0A0",
+                menuText: "#E9E9E9",
+  
+                backGround: "rgba(249,247,243,1)",
+                bannerBg: "rgba(255, 255, 255, 0)",
+                aboutText: "rgba(0, 0, 0, 0.2)",
+  
+                cardOne: "#E7C1D3",
+                cardTwo: "#EFDA6E",
+                cardThree: "#A4DAC3",
+                cardFour: "#77AAEA",
+              },
+            },
+          },
+        };
+      </script>
 </head>
-<body>
-    <h1>The blog page should contain 4 questions and their answers:</h1>
-    <h3>What is the Document Object Model (DOM)?</h3>
-    <h3>What is the Document Object Model (DOM)?</h3>
-    <h3>What is the Document Object Model (DOM)?</h3>
-    <h3>What is the Document Object Model (DOM)?</h3>
+<body class="lexend-normal bg-white">
+    <header class="sticky top-0 overflow-hidden bg-stickyNav2 backdrop-blur z-30 flex flex-col space-y-8">
+        <!-- navbar start  -->
+        <div class="bg-stickyNav backdrop-blur-sm">
+            <div class="navbar py-2 w-11/12 mx-auto ">
+                <!-- left button  -->
+                <div class="navbar-start">
+                  <a href="./index.html" class="btn bg-btnPrimary hover:bg-btnSecondary text-xl px-8 py-3 h-auto">Home</a>
+                </div>
+                <!-- middle logo  -->
+                <div class="navbar-center  flex space-x-4">
+                  <img src="assets/logo.png" alt="logo">
+                  <h3 class="text-xl font-semibold hidden md:block">Donate Bangladesh</h3>
+                </div>
+                <!-- balance part  -->
+                <div class="navbar-end flex space-x-1">
+                  <img src="assets/coin.png" alt="coin">
+                  <h4>5500</h4>
+                  <h4>BDT</h4>
+                </div>
+            </div>
+        </div>
+         <!-- navbar end  -->
+
+    
+    </header>
+
+    <main class="my-10 w-11/12 mx-auto">
+        <h1 class="font-extrabold text-4xl">Important FAQ</h1>
+
+        <!-- question section  -->
+        <section class="my-5">
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The DOM is a structured representation of a webpage, allowing JavaScript to access, modify, and manipulate HTML and CSS elements programmatically.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>You can select a DOM element using document.querySelector(), document.querySelectorAll(), getElementById(), or getElementsByClassName() based on selectors like ID, class, or tag.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>Event delegation allows a parent element to handle events from its child elements, improving efficiency by reducing multiple event listeners, especially in dynamic content.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>Use getAttribute()/setAttribute() to manage attributes, style property for inline styles, and classList to add/remove CSS classes, ensuring dynamic DOM manipulation.</p>
+                </div>
+              </div>
+        </section>
+    </main>
 </body>
 </html>
