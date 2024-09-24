@@ -5,10 +5,14 @@ function getInputValue(id){
     {
         const a=['0','1','2','3','4','5','6','7','8','9']
         if(!a.includes(inputValue[i]))
-        return NaN;
+        {
+            document.getElementById(id).value=""
+            return NaN;
+        }
         
     }
     const floatValue =parseFloat(inputValue);
+    document.getElementById(id).value=""
     return floatValue;
 }
 function getTextValue(id){
@@ -35,7 +39,8 @@ function getHistory(inputValue,eventName)
 
     parentDiv.appendChild(h2)
     parentDiv.appendChild(p)
-    historySection.appendChild(parentDiv);
+    historySection.insertBefore(parentDiv, historySection.firstChild);
+    
 }
 
 

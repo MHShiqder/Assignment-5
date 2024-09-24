@@ -25,6 +25,7 @@ document.getElementById('history-button')
 
 
 // donation operation functions 
+
 document.getElementById('donate-input-button')
 .addEventListener('click',function(event){
     event.preventDefault();
@@ -32,5 +33,23 @@ document.getElementById('donate-input-button')
     clickFunction('donate-input-value','donated-balance','Flood at Noakhali, Bangladesh');    
 
 })
+
+document.getElementById('donate-input-button-2')
+.addEventListener('click',function(event){
+    event.preventDefault();
+    // clickFunction(donateInputValue,donatedBalance,eventName)
+    clickFunction('donate-input-value-2','donated-balance-2','for Flood Relief in Feni,Bangladesh');    
+
+})
+
+document.getElementById('donate-input-button-3')
+.addEventListener('click',function(event){
+    event.preventDefault();
+    // clickFunction(donateInputValue,donatedBalance,eventName)
+    clickFunction('donate-input-value-3','donated-balance-3','to Aid for Injured in the Quota Movement');    
+
+})
+
+
 
 
