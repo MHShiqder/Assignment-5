@@ -72,7 +72,7 @@
                 <!--Current balance part  -->
                 <div class="navbar-end flex space-x-1">
                   <img src="assets/coin.png" alt="coin">
-                  <h4 id="current-value">5500</h4>
+                  <h4 id="current-balance">5500</h4>
                   <h4>BDT</h4>
                 </div>
             </div>
@@ -81,8 +81,8 @@
 
          <!-- navigate button section -->
           <section class=" w-11/12 mx-auto text-center space-x-3 pb-3">
-            <button class="btn bg-btnPrimary hover:bg-btnSecondary">Donation</button>
-            <button class="btn bg-btnTertiary hover:bg-btnSecondary border-2 border-gray-200">History</button>
+            <button id="donation-button" class="btn bg-btnPrimary hover:bg-btnSecondary">Donation</button>
+            <button id="history-button" class="btn bg-btnTertiary hover:bg-btnSecondary border-2 border-gray-200">History</button>
           </section>
     </header>
 
@@ -118,7 +118,7 @@
                     <!-- total donate button -->
                     <button class=" flex space-x-1 bg-slate-200 rounded-lg py-2 px-3 items-center">
                         <img src="assets/coin.png" alt="coin">
-                        <h4>5500</h4>
+                        <h4 id="donated-balance">5500</h4>
                         <h4>BDT</h4>
                     </button>
                     <!-- tittle & description -->
@@ -142,7 +142,7 @@
 
 
         <!-- history section  -->
-         <section id="history-section" class="space-y-5">
+         <section id="history-section" class="hidden w-11/12 space-y-5 mx-auto my-10">
 
          </section>
     </main>
